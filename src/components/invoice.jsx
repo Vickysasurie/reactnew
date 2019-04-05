@@ -54,7 +54,7 @@ console.log(this.state.listData)
     componentWillMount(){
         window.scrollTo(0,0)
         if (typeof window !== 'undefined') {
-            this.state.path = window.location.protocol + '//' + "103.207.1.123:3002"+ '/product/qr?in='; // (or whatever)
+            this.state.path = window.location.protocol + '//' + "52.26.246.107:3005"+ '/product/qr?in='; // (or whatever)
             console.log(this.state.path)
             this.setState({path:this.state.path}); 
         } 
