@@ -124,7 +124,7 @@ class CheckOut extends Component {
         window.scrollTo(0,0)
        // console.log(this.state.listData.cust_id);
         if( this.state.listData!=null&&this.state.listData.length!=0) {
-            axios.get("http://192.168.1.130:3001/orders/"+this.state.listData[0].cust_id).then(response => {
+            axios.get("http://52.26.246.107:3005/orders/"+this.state.listData[0].cust_id).then(response => {
              this.state. places= response.data;
              console.log(this.state.places);
              })
@@ -314,7 +314,7 @@ class CheckOut extends Component {
         this.state.resource.push(this.state.listData2);
          }
          for(var i=0;i<this.state.listData1.length;i++){
-        axios.put("http://13.58.92.162:3000/provider/" + this.state.listData[i].provider_id, this.state.listData1[i]).then(response => {
+        axios.put("http://52.26.246.107:3005/provider/" + this.state.listData[i].provider_id, this.state.listData1[i]).then(response => {
             console.log(response);
         }).catch(error => console.log(error)
         )
