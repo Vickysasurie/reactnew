@@ -257,7 +257,7 @@ class Home extends Component {
 
   }
   async    get() {
-    await axios.get("http://192.168.1.130:3001/provider").then(response => {
+    await axios.get("http://52.26.246.107:3005/provider").then(response => {
       this.setState({ listData1: response.data });
       console.log(this.state.listData1);
        localStorage.setItem('selected',JSON.stringify(this.state.listData1));
@@ -333,7 +333,7 @@ class Home extends Component {
   }
   async join2() {
 
-    var response = await axios.get("http://192.168.1.130:3001/products")
+    var response = await axios.get("http://52.26.246.107:3005/products")
     // console.log(response1);  
     this.setState({ listData: await response.data });
     console.log(this.state.listData)
